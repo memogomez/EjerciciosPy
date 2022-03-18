@@ -1,5 +1,5 @@
 import pytest
-from main import suma, invertir, palindroma, arraySuma
+from main import suma, invertir, palindroma, arraySuma, sumaMatriz
 
 def test_suma():
     assert suma(2, 2) == 4
@@ -27,3 +27,6 @@ def test_palindroma():
 
 def test_arraySuma():
     assert arraySuma([1,2,3,4]) == 10
+
+def test_sumaMat():
+    assert sumaMatriz([[1,2,3],[4,5,6],[9,8,9]],3) == 2

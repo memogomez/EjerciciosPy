@@ -49,7 +49,7 @@ def arraySuma(ar):
     """
     Función que recibe un array y devulve la suma de cada uno de sus elementos
     Args:
-        ar(array[]):
+        ar(array[]): Array de números
     
     return: res
     """
@@ -57,3 +57,22 @@ def arraySuma(ar):
     for i in ar:
         res = res + i
     return(res)
+
+def sumaMatriz(arr,n):
+    """
+    Función que recibe una matriz cuadrada y un número entero con la dimension de la misma, calcula la suma de la diagonal menos la diagonal invertida en valor absoluto
+    Args:
+        arr(matiz[][]/int): Matriz cuadrada de números enteros
+        n(int): número entero que define el tamaño de la matriz cuadrada
+
+    """
+    c = 0
+    diagonal = 0
+    inversa = 0
+    for i in range(n):
+        diagonal = diagonal + arr[i][i]
+        inversa = inversa + arr[i][n-1]
+        c = c + 1
+        n = n - 1 
+    res = diagonal - inversa
+    return(abs(res))
